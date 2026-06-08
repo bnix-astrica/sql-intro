@@ -1,0 +1,2 @@
+-- Adults Only
+SELECT name, age from users WHERE age >=18;
