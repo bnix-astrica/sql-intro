@@ -1,2 +1,50 @@
 -- Adults Only
 SELECT name, age from users WHERE age >=18;
+
+--multiply
+SELECT price * amount AS total FROM items;
+
+-- You will be given a table: "opposite", with a column: "number". Return a table with a column: "res".
+SELECT number * -1 AS res 
+FROM opposite;
+
+--SQL ordering
+/*  SQL  */
+SELECT * FROM companies ORDER BY employees DESC;
+
+--collect tuition
+-- Your Code Here
+SELECT * from students WHERE tuition_received = false;
+
+-- Canadian border
+SELECT * from travelers WHERE country NOT IN ('Canada', 'USA', 'Mexico');
+
+-- Create your SELECT statement here
+SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people;
+
+-- rounding
+/*  SQL  */
+SELECT 
+  FLOOR(number1) AS number1, 
+  CEIL(number2) AS number2 
+FROM 
+  decimals;
+
+-- Century from Year
+SELECT 
+  yr,
+  CEIL(yr / 100.0)::INTEGER AS century
+FROM 
+  years;
+
+-- is divisible
+-- You will be given a table 'kata' with columns 'id', 'n', 'x', and 'y'. 
+-- Return the 'id' and your result in a column named 'res' using a SELECT statement.
+-- You DON'T need to create a function, that's for other languages.
+SELECT 
+    id, 
+    CASE 
+        WHEN n % x = 0 AND n % y = 0 THEN true 
+        ELSE false 
+    END AS res
+FROM kata;
